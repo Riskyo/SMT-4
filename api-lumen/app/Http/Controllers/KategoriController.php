@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -14,7 +15,7 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $data = kategori::all();
+        $data = Menu::all();
 
         return response()->json($data);
     }
@@ -27,9 +28,14 @@ class KategoriController extends Controller
     public function create(Request $request)
     {
         //
-        Kategori::create($request->all());
+        $this->validate($request, [
+            'kategori' => 'required | unique:kategoris',
+            'keterangan' => 'required'
+        ]);
 
-        return response()->json("Data sudah dimasukkan");
+        $kategori = Kategori::create($request->all());
+
+        return response()->json($kategori);
     }
 
     /**
