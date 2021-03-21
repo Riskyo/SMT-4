@@ -11,16 +11,16 @@ class CreatePelanggansTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('pelanggans', function (Blueprint $table) {
-            $table->increments('idpelanggan');
-            $table->string('pelanggan');
-            $table->string('alamat');
-            $table->string('telp');
-            $table->timestamps();
-        });
-    }
+    // public function up()
+    // {
+    //     Schema::create('pelanggans', function (Blueprint $table) {
+    //         $table->increments('idpelanggan');
+    //         $table->string('pelanggan');
+    //         $table->string('alamat');
+    //         $table->string('telp');
+    //         $table->timestamps();
+    //     });
+    // }
 
     /**
      * Reverse the migrations.

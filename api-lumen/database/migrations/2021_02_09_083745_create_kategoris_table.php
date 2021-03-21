@@ -11,15 +11,15 @@ class CreateKategorisTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('kategoris', function (Blueprint $table) {
-            $table->increments('idkategori');
-            $table->string('kategori');
-            $table->string('keterangan');
-            $table->timestamps();
-        });
-    }
+    // public function up()
+    // {
+    //     Schema::create('kategoris', function (Blueprint $table) {
+    //         $table->increments('idkategori');
+    //         $table->string('kategori');
+    //         $table->string('keterangan');
+    //         $table->timestamps();
+    //     });
+    // }
 
     /**
      * Reverse the migrations.

@@ -11,17 +11,17 @@ class CreateMenusTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('menus', function (Blueprint $table) {
-            $table->increments('idmenu');
-            $table->bigInteger('idkategori');
-            $table->string('menu');
-            $table->string('gambar');
-            $table->bigInteger('harga');
-            $table->timestamps();
-        });
-    }
+    // public function up()
+    // {
+    //     Schema::create('menus', function (Blueprint $table) {
+    //         $table->increments('idmenu');
+    //         $table->bigInteger('idkategori');
+    //         $table->string('menu');
+    //         $table->string('gambar');
+    //         $table->bigInteger('harga');
+    //         $table->timestamps();
+    //     });
+    // }
 
     /**
      * Reverse the migrations.
