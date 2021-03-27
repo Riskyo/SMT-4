@@ -52,7 +52,11 @@ const Order = () => {
     let no = 1;
     return (
         <div>
-            <Modal isOpen={mopen} onRequestClose={()=>setMopen(false)} onAfterOpen = {isiForm} style={
+            <Modal 
+            isOpen={mopen} 
+            onRequestClose={()=>setMopen(false)} 
+            onAfterOpen = {isiForm} 
+            style={
                 {
                     overlay:{
                         background : 'transparent !important'
@@ -66,8 +70,8 @@ const Order = () => {
                         transform             : 'translate(-50%, -50%)',
                         width                 : '40%'
                     }
-                }
-            }>
+                }}
+            >
 
                 <div className="row">
                     <h2>Pembayaran Order {pelanggan}</h2>

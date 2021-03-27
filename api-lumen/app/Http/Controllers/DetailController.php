@@ -49,7 +49,7 @@ class DetailController extends Controller
     {
         //
         $data = DB::table('details')
-        ->join('orders', 'details.idorders', '=', 'orders.idorder')
+        ->join('orders', 'details.idorder', '=', 'orders.idorder')
         ->join('menus', 'menus.idmenu', '=', 'details.idmenu')
         ->join('pelanggans', 'pelanggans.idpelanggan', '=', 'orders.idpelanggan')
         ->join('kategoris', 'kategoris.idkategori', '=', 'menus.idkategori')
